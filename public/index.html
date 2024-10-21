@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tailwind</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark:bg-zinc-900 dark:text-slate-200 transition duration-300 flex flex-col h-screen">
+    
+    <nav class="bg-zinc-900 text-white p-4">
+        <div class="container mx-auto flex justify-end">
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:underline">Gmail</a></li>
+                <li><a href="#" class="hover:underline">Images</a></li>
+            </ul>
+        </div>
+    </nav>    
+
+    <div class="flex-grow flex flex-col justify-center items-center">
+        <h1 class="text-gray-900 dark:text-white text-7xl font-semibold text-center mb-8">Google</h1>
+        
+        <div class="relative w-full max-w-xl mx-auto mb-8">
+            <form action="" class="flex items-center">
+                <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-emerald-500">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="search" placeholder="Search Google" 
+                class="rounded-full pl-12 pr-4 py-2 w-full border border-gray-300 shadow bg-gray-700 hover:bg-gray-600 focus:outline-none text-left text-white transition duration-300">
+                <span class="absolute right-10 top-1/2 transform -translate-y-1/2 text-emerald-500 cursor-pointer">
+                    <i class="fa-solid fa-microphone"></i>
+                </span>
+                <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-emerald-500 cursor-pointer">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </span>
+            </form>
+        </div>
+        
+        <div class="flex space-x-4 justify-center mb-5">
+            <button class="bg-zinc-800 text-white px-5 py-2 rounded-xl hover:bg-zinc-600" aria-label="Google Search">
+                Google Search
+            </button>
+            <button class="bg-zinc-800 text-white px-5 py-2 rounded-xl hover:bg-zinc-600" aria-label="I'm Feeling Lucky">
+                I'm Feeling Lucky
+            </button>
+        </div>
+    </div>
+    
+
+    <div class="flex justify-center items-center mb-4">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="hidden toggle" />
+        <label for="toggle" class="cursor-pointer">
+            <div class="toggle-bg w-9 h-5 rounded-full flex items-center p-1 relative">
+                <div class="toggle-circle w-4 h-4 bg-white rounded-full"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>       
+    
+    <footer class="bg-zinc-950 text-white w-full py-4 mt-auto">
+        <div class="container mx-auto">
+            <p class="mb-2 text-left">Indonesia</p>
+     
+            <div class="border-b border-gray-400 w-full my-4"></div>
+    
+            <div class="px-0">
+                <div class="flex flex-wrap justify-start gap-4 text-sm">
+                    <div class="flex gap-4">
+                        <span class="cursor-pointer hover:underline">About</span>
+                        <span class="cursor-pointer hover:underline">Advertising</span>
+                        <span class="cursor-pointer hover:underline">Business</span>
+                        <span class="cursor-pointer hover:underline">How Search works</span>
+                    </div>
+                    <div class="flex gap-4 ml-auto">
+                        <span class="cursor-pointer hover:underline">Privacy</span>
+                        <span class="cursor-pointer hover:underline">Terms</span>
+                        <span class="cursor-pointer hover:underline">Settings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const toggleCircle = document.querySelector('.toggle-circle');
+        const html = document.querySelector('html');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                html.classList.add('dark'); 
+                toggleCircle.classList.add('translate-x-4'); 
+            } else {
+                html.classList.remove('dark'); 
+                toggleCircle.classList.remove('translate-x-4');
+            }
+        });
+    </script>
+</body>
+</html>

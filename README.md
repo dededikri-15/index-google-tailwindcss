@@ -8,7 +8,7 @@ Proyek ini membuat replika halaman awal Google menggunakan Tailwind CSS untuk st
 - Light/Dark Mode Toggle.
 - Desain Sederhana: Mengutamakan tampilan minimalis dengan hanya menyertakan elemen-elemen utama.
 
-![Image Alt]([image_url](https://github.com/dededikri-15/index-google-tailwindcss/blob/main/google.png)
+![Image Alt](https://github.com/dededikri-15/index-google-tailwindcss/blob/main/google.png)
 
 ## Tech Stack
 
